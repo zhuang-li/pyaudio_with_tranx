@@ -1,0 +1,356 @@
+ABE	Lehigh Valley International Airport
+ABI	Abilene Regional Airport
+ABQ	Albuquerque International Sunport
+ABR	Aberdeen Regional Airport
+ABY	Southwest Georgia Regional Airport
+ACK	Nantucket Memorial Airport
+ACT	Waco Regional Airport
+ACV	Arcata Airport
+ACY	Atlantic City International Airport
+AEX	Alexandria International Airport
+AGS	Augusta Regional Airport
+ALB	Albany International Airport
+ALO	Waterloo Regional Airport
+ALW	Walla Walla Regional Airport
+AMA	Rick Husband Amarillo International Airport
+APN	Alpena County Regional Airport
+ART	Watertown International Airport
+ASE	Aspen-Pitkin County Airport
+ATL	Atlanta International Airport	Hartfield
+ATW	Outagamie County Regional Airport
+AUS	Austin-Bergstrom International Airport
+AVL	Asheville Regional Airport
+AVP	Wilkes-Barre/Scranton International Airport
+AZA	Phoenix-Mesa Gateway Airport
+AZO	Kalamazoo/Battle Creek International Airport
+BDL	Bradley International Airport
+BFF	Western Nebraska Regional Airport
+BFI	King County International Airport
+BFL	Meadows Field
+BGM	Greater Binghamton Airport
+BGR	Bangor International Airport
+BHB	Hancock County-Bar Harbor Airport
+BHM	Birmingham-Shuttlesworth International Airport
+BIL	Billings Logan International Airport
+BIS	Bismarck Municipal Airport
+BJI	Bemidji Regional Airport
+BLD	Boulder City Municipal Airport
+BLI	Bellingham International Airport
+BLV	MidAmerica St. Louis Airport
+BMI	Central Illinois Regional Airport at Bloomington-Normal
+BNA	Nashville International Airport
+BOI	Boise Airport
+BOS	Gen. Edward Lawrence Logan International Airport	Boston Logan	Boston Airport	Logan
+BPT	Jack Brooks Regional Airport
+BQK	Brunswick Golden Isles Airport
+BQN	Rafael Hernández International Airport
+BRD	Brainerd Lakes Regional Airport
+BRO	Brownsville/South Padre Island International Airport
+BTM	Bert Mooney Airport
+BTR	Baton Rouge Metropolitan Airport
+BTV	Burlington International Airport
+BUF	Buffalo Niagara International Airport
+BUR	Bob Hope Airport
+BWI	Baltimore International Airport	Baltimore Washington Airport
+BZN	Bozeman Yellowstone International Airport
+CAE	Columbia Metropolitan Airport
+CAK	Akron-Canton Regional Airport
+CEC	Del Norte County Airport
+CHA	Chattanooga Metropolitan Airport
+CHO	Charlottesville-Albemarle Airport
+CHS	Charleston International Airport / Charleston AFB
+CIC	Chico Municipal Airport
+CID	The Eastern Iowa Airport
+CIU	Chippewa County International Airport
+CKB	North Central West Virginia Airport
+CLD	McClellan-Palomar Airport
+CLE	Cleveland-Hopkins International Airport
+CLL	Easterwood Airport
+CLM	William R. Fairchild International Airport
+CLT	Charlotte/Douglas International Airport
+CMH	Port Columbus International Airport
+CMI	University of Illinois - Willard Airport
+CMX	Houghton County Memorial Airport
+COD	Yellowstone Regional Airport
+COS	City of Colorado Springs Municipal Airport
+COU	Columbia Regional Airport
+CPR	Casper/Natrona County International Airport
+CRP	Corpus Christi International Airport
+CRW	Yeager Airport
+CSG	Columbus Metropolitan Airport
+CVG	Cincinnati/Northern Kentucky International Airport
+CVX	Charlevoix Municipal Airport
+CWA	Central Wisconsin Airport
+CYS	Cheyenne Regional Airport
+DAB	Daytona Beach International Airport
+DAL	Love Field
+DBQ	Dubuque Regional Airport
+DCA	Ronald Reagan Washington National Airport
+DEN	Denver International Airport
+DFW	Dallas Fort Worth International Airport	Dallas Airport
+DHN	Dothan Regional Airport
+DIK	Dickinson Theodore Roosevelt Regional Airport
+DLH	Duluth International Airport
+DRO	Durango-La Plata County Airport
+DRT	Del Rio International Airport
+DSM	Des Moines International Airport
+DTW	Detroit Metropolitan Wayne County Airport
+EAR	Kearney Regional Airport
+EAT	Pangborn Memorial Airport
+EAU	Chippewa Valley Regional Airport
+ECP	Northwest Florida Beaches International Airport [nb 2]
+EGE	Eagle County Regional Airport
+EKO	Elko Regional Airport
+ELM	Elmira/Corning Regional Airport
+ELP	El Paso International Airport
+ENV	Wendover Airport
+ERI	Erie International Airport
+ESC	Delta County Airport
+EUG	Eugene Airport
+EVV	Evansville Regional Airport
+EWB	New Bedford Regional Airport
+EWN	Coastal Carolina Regional Airport
+EWR	Newark Liberty International Airport	Newark Airport
+EYW	Key West International Airport
+FAT	Fresno Yosemite International Airport
+FAY	Fayetteville Regional Airport
+FCA	Glacier Park International Airport
+FLG	Flagstaff Pulliam Airport
+FLL	Fort Lauderdale-Hollywood International Airport
+FLO	Florence Regional Airport
+FMN	Four Corners Regional Airport
+FNT	Bishop International Airport
+FRD	Friday Harbor Airport
+FSD	Sioux Falls Regional Airport
+FSM	Fort Smith Regional Airport
+FWA	Fort Wayne International Airport
+GCC	Gillette-Campbell County Airport
+GCK	Garden City Regional Airport
+GCN	Grand Canyon National Park Airport
+GCW	Grand Canyon West Airport
+GEG	Spokane International Airport
+GFK	Grand Forks International Airport
+GGG	East Texas Regional Airport
+GJT	Grand Junction Regional Airport
+GNV	Gainesville Regional Airport
+GPT	Gulfport-Biloxi International Airport
+GRB	Austin Straubel International Airport
+GRI	Central Nebraska Regional Airport
+GRK	Killeen-Fort Hood Regional Airport / Robert Gray Army Airfield
+GRR	Gerald R. Ford International Airport
+GSO	Piedmont Triad International Airport
+GSP	Greenville-Spartanburg International Airport
+GTF	Great Falls International Airport
+GTR	Golden Triangle Regional Airport
+GUC	Gunnison-Crested Butte Regional Airport
+GUM	Antonio B. Won Pat International Airport
+HDN	Yampa Valley Airport
+HGR	Hagerstown Regional Airport
+HHH	Hilton Head Airport
+HIB	Range Regional Airport
+HLN	Helena Regional Airport
+HNL	Honolulu International Airport
+HOB	Lea County Regional Airport
+HOU	William P. Hobby Airport
+HPN	Westchester County Airport
+HRL	Valley International Airport
+HSV	Huntsville International Airport
+HTS	Tri-State Airport
+HVN	Tweed New Haven Regional Airport
+HYA	Barnstable Municipal Airport
+IAD	Washington Dulles International Airport	Dulles	Washington Airport
+IAG	Niagara Falls International Airport
+IAH	George Bush Intercontinental Airport	Houston Intercontinental
+ICT	Wichita Dwight D. Eisenhower National Airport
+IDA	Idaho Falls Regional Airport
+IFP	Laughlin/Bullhead International Airport
+ILM	Wilmington International Airport
+IMT	Ford Airport
+IND	Indianapolis International Airport
+INL	Falls International Airport
+IPT	Williamsport Regional Airport
+ISN	Sloulin Field International Airport
+ISP	Long Island MacArthur Airport
+ITH	Ithaca Tompkins Regional Airport
+ITO	Hilo International Airport
+JAC	Jackson Hole Airport
+JAN	Jackson-Evers International Airport
+JAX	Jacksonville International Airport
+JFK	Kennedy International Airport	Kennedy Airport
+JLN	Joplin Regional Airport
+KOA	Kona International Airport at Keahole
+LAN	Capital Region International Airport
+LAR	Laramie Regional Airport
+LAS	McCarran International Airport	Las Vegas International Airport
+LAW	Lawton-Fort Sill Regional Airport
+LAX	Los Angeles International Airport
+LBB	Lubbock Preston Smith International Airport
+LBE	Arnold Palmer Regional Airport
+LCH	Lake Charles Regional Airport
+LCK	Rickenbacker International Airport
+LEB	Lebanon Municipal Airport
+LEX	Blue Grass Airport
+LFT	Lafayette Regional Airport
+LGA	La Guardia Airport	La Guardia
+LGB	Long Beach Airport
+LIH	Lihue Airport
+LIT	Bill and Hillary Clinton National Airport
+LMT	Klamath Falls Airport
+LNK	Lincoln Airport
+LNY	Lanai Airport
+LRD	Laredo International Airport
+LSE	La Crosse Regional Airport
+LWB	Greenbrier Valley Airport
+LWS	Lewiston-Nez Perce County Airport
+LYH	Lynchburg Regional Airport
+MAF	Midland International Airport
+MBS	MBS International Airport
+MCI	Kansas City International Airport
+MCO	Orlando International Airport
+MDT	Harrisburg International Airport
+MDW	Chicago Midway International Airport
+MEM	Memphis International Airport
+MFE	McAllen-Miller International Airport
+MFR	Rogue Valley International-Medford Airport
+MGM	Montgomery Regional Airport
+MGW	Morgantown Municipal Airport
+MHK	Manhattan Regional Airport
+MHT	Manchester-Boston Regional Airport
+MIA	Miami International Airport
+MKE	General Mitchell International Airport	General Mitchell	Milwaukee Airport
+MKG	Muskegon County Airport
+MKK	Molokai Airport
+MLB	Melbourne International Airport
+MLI	Quad City International Airport
+MLU	Monroe Regional Airport
+MMH	Mammoth Yosemite Airport
+MOB	Mobile Regional Airport
+MOD	Modesto City-County Airport
+MOT	Minot International Airport
+MQT	Sawyer International Airport
+MRY	Monterey Regional Airport
+MSN	Dane County Regional Airport
+MSO	Missoula International Airport
+MSP	Minneapolis-St. Paul International Airport
+MSY	Louis Armstrong New Orleans International Airport
+MTJ	Montrose Regional Airport
+MVY	Martha's Vineyard Airport
+MWA	Williamson County Regional Airport
+MYR	Myrtle Beach International Airport
+OAJ	Albert J. Ellis Airport
+OAK	Oakland International Airport
+OGG	Kahului Airport
+OKC	Will Rogers World Airport
+OMA	Eppley Airfield
+ONT	Ontario International Airport
+ORD	Chicago O'Hare International Airport	O'Hare
+ORF	Norfolk International Airport
+OTH	Southwest Oregon Regional Airport
+OWB	Owensboro-Daviess County Regional Airport
+PAH	Barkley Regional Airport
+PBG	Plattsburgh International Airport
+PBI	Palm Beach International Airport
+PDX	Portland International Airport
+PGA	Page Municipal Airport
+PGD	Punta Gorda Airport
+PGV	Pitt-Greenville Airport
+PHF	Newport News/Williamsburg International Airport
+PHL	Philadelphia International Airport
+PHX	Phoenix International Airport	Phoenix Sky Harbor International Airport
+PIA	General Downing - Peoria International Airport
+PIB	Hattiesburg-Laurel Regional Airport
+PIE	St. Petersburg International Airport
+PIH	Pocatello Regional Airport
+PIR	Pierre Regional Airport
+PIT	Pittsburgh International Airport
+PLN	Pellston Regional Airport of Emmet County
+PNS	Pensacola International Airport
+PPG	Pago Pago International Airport
+PQI	Northern Maine Regional Airport at Presque Isle
+PSC	Tri-Cities Airport
+PSE	Mercedita International Airport
+PSP	Palm Springs International Airport
+PUW	Pullman/Moscow Regional Airport
+PVC	Provincetown Municipal Airport
+PVD	Theodore Francis Green State Airport
+PVU	Provo Municipal Airport[1]
+PWM	Portland International Jetport
+RAP	Rapid City Regional Airport
+RDD	Redding Municipal Airport
+RDM	Redmond Municipal Airport
+RDU	Raleigh-Durham International Airport
+RFD	Chicago Rockford International Airport
+RHI	Rhinelander-Oneida County Airport
+RIC	Richmond International Airport
+RIW	Riverton Regional Airport
+RKD	Knox County Regional Airport
+RKS	Rock Springs - Sweetwater County Airport
+RNO	Reno/Tahoe International Airport
+ROA	Roanoke Regional Airport
+ROC	Greater Rochester International Airport
+ROP	Rota International Airport
+ROW	Roswell International Air Center
+RST	Rochester International Airport
+RSW	Southwest Florida International Airport
+SAF	Santa Fe Municipal Airport
+SAN	San Diego International Airport
+SAT	San Antonio International Airport
+SAV	Savannah/Hilton Head International Airport
+SBA	Santa Barbara Municipal Airport
+SBN	South Bend International Airport
+SBP	San Luis Obispo County Regional Airport
+SBY	Salisbury-Ocean City Wicomico Regional Airport
+SCE	University Park Airport
+SCK	Stockton Metropolitan Airport
+SDF	Louisville International Airport
+SEA	Seattle-Tacoma International Airport
+SFB	Orlando Sanford International Airport
+SFO	San Francisco International Airport
+SGF	Springfield-Branson National Airport
+SGU	St. George Regional Airport
+SHD	Shenandoah Valley Regional Airport
+SHR	Sheridan County Airport
+SHV	Shreveport Regional Airport
+SIG	Fernando Luis Ribas Dominicci Airport
+SJC	Norman Y. Mineta San José International Airport
+SJT	San Angelo Regional Airport
+SJU	Luis Muñoz Marín International Airport
+SLC	Salt Lake City International Airport
+SMF	Sacramento International Airport
+SMX	Santa Maria Public Airport
+SNA	John Wayne Airport - Orange County
+SPI	Abraham Lincoln Capital Airport
+SPN	Saipan International Airport
+SPS	Wichita Falls Municipal Airport / 
+SRQ	Sarasota-Bradenton International Airport
+STC	St. Cloud Regional Airport
+STL	Lambert-St. Louis International Airport
+STS	Charles M. Schulz-Sonoma County Airport
+STT	Cyril E. King Airport
+STX	Henry E. Rohlsen Airport
+SUN	Friedman Memorial Airport
+SUX	Sioux Gateway Airport
+SWF	Stewart International Airport
+SYR	Syracuse Hancock International Airport
+TLH	Tallahassee Regional Airport
+TOL	Toledo Express Airport
+TPA	Tampa International Airport
+TRI	Tri-Cities Regional Airport
+TTN	Trenton Mercer Airport
+TUL	Tulsa International Airport
+TUS	Tucson International Airport
+TVC	Cherry Capital Airport
+TWF	Magic Valley Regional Airport
+TXK	Texarkana Regional Airport
+TYR	Tyler Pounds Regional Airport
+TYS	McGhee Tyson Airport
+UIN	Quincy Regional Airport
+UST	Northeast Florida Regional Airport
+VLD	Valdosta Regional Airport
+VPS	Destin-Fort Walton Beach Airport
+VQS	Antonio Rivera Rodríguez Airport
+WST	Westerly State Airport
+XNA	Northwest Arkansas Regional Airport
+YKM	Yakima Air Terminal
+YNG	Youngstown-Warren Regional Airport
+YUM	Yuma International Airport
