@@ -144,5 +144,8 @@ class TransitionSystem(object):
         elif lang == 'wikisql':
             from .lang.sql.sql_transition_system import SqlTransitionSystem
             return SqlTransitionSystem
+        elif lang == 'nlmap':
+            from .lang.nlmap.nlmap_transition_system import NlmapTransitionSystem
+            return NlmapTransitionSystem
 
         raise ValueError('unknown language %s' % lang)

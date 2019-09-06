@@ -1,4 +1,4 @@
-name: audio_tranx
+name: tranx_experiment
 channels:
 - pytorch
 - defaults
@@ -30,7 +30,7 @@ dependencies:
 - ptyprocess=0.5.2
 - pycparser=2.18
 - pygments=2.2.0
-- python=2.7.15
+- python=3.6.5
 - readline=7.0
 - scandir=1.7
 - setuptools=39.1.0

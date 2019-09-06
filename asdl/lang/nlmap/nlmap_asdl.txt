@@ -1,0 +1,83 @@
+int, key, dist, kmmi, cw, var
+
+s = anony_x(x one)
+    |dist_x_unit(x one, unit two)
+    | dist_x_x_unit(x one, x two, unit three)
+    | dist_x(x one)
+    | dist_x_x(x one, x two)
+    |dist_x_for(x one, for two)
+    | dist_x_x_for(x one, x two, for three)
+
+for = for(cw_lit one)
+
+unit = unit(kmmi_lit one)
+
+x = query_direction(direction one, meta two)
+    | query_around(around one, meta two)
+    | query_query_u(query_u one, meta two)
+
+direction = north_around(around one)
+            | north_query_u(query_u one)
+            | west_around(around one)
+            | west_query_u(query_u one)
+            | south_around(around one)
+            | south_query_u(query_u one)
+            | east_around(around one)
+            | east_query_u(query_u one)
+
+around = around_meta_topx(center one, search two, maxdist three, meta_topx four)
+        | around(center one, search two, maxdist three)
+
+maxdist = maxdist(dist_lit one)
+
+search = search(query_u one)
+
+center = center(query_u one)
+
+query_u = anony_area_nwr(area one, nwr* two)
+        | anony_nwr(nwr* one)
+
+meta = qtype_meta_req(meta_req one)
+        | qtype_meta_pos(meta_pos one)
+
+meta_pos = nodup(meta_req one)
+
+meta_req = least(meta_topx one)
+            | latlong_meta_topx(meta_topx one)
+            | latlong
+            | count
+            | findkey_key_meta_topx(key_lit one, meta_topx two)
+            | findkey_key(key_lit one)
+            | findkey_and_key_key(and_key_key one)
+            | anony_meta_req_meta_req(meta_req one, meta_req two)
+            | anony_meta_req_meta_pos(meta_req one, meta_pos two)
+
+and_key_key = and_key_key(key_lit one, key_lit two)
+
+meta_topx = topx(int_lit one)
+
+area = area(inner one)
+
+nwr = nwr(inner one)
+
+inner = anony_keyval(keyval one)
+        | anony_keyval_inner(keyval one, inner two)
+        | and_inner_inner(inner one, inner two)
+        | or_inner_inner(inner one, inner two)
+
+keyval = keyval(key_lit one, val two)
+
+val = anony_var(var one)
+    | or_val_val(val one, val two)
+    | and_val_val(val one, val two)
+
+cw_lit = anony_cw(cw one)
+
+kmmi_lit = anony_kmmi(kmmi one)
+
+dist_lit = anony_dist(dist one)
+        | anony_dist_int(int_lit one)
+
+key_lit = anony_key(key one)
+
+int_lit = anony_int(int one)

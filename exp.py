@@ -20,6 +20,8 @@ from torch.autograd import Variable
 import evaluation
 from asdl import *
 from asdl.asdl import ASDLGrammar
+from asdl.lang.nlmap import *
+from asdl.lang.nlmap.nlmap_transition_system import NlmapTransitionSystem
 from common.registerable import Registrable
 from components.dataset import Dataset, Example
 from common.utils import update_args, init_arg_parser
@@ -52,6 +54,7 @@ def train(args):
     """Maximum Likelihood Estimation"""
 
     # load in train/dev set
+    print ("training started ...")
     train_set = Dataset.from_bin_file(args.train_file)
 
     if args.dev_file:
@@ -59,17 +62,22 @@ def train(args):
     else: dev_set = Dataset(examples=[])
 
     vocab = pickle.load(open(args.vocab, 'rb'))
-
+    print ("reading grammar ...")
     grammar = ASDLGrammar.from_text(open(args.asdl_file).read())
-    transition_system = Registrable.by_name(args.transition_system)(grammar)
-
+    print ("transition system", args.transition_system)
+    transition_system = NlmapTransitionSystem(grammar)
+    print (transition_system)
+    print ("register parser ...")
     parser_cls = Registrable.by_name(args.parser)  # TODO: add arg
     model = parser_cls(args, vocab, transition_system)
+    print ("setting model to training mode")
     model.train()
 
     evaluator = Registrable.by_name(args.evaluator)(transition_system, args=args)
+    print ("dasdasdas")
+    print (args.cuda)
     if args.cuda: model.cuda()
-
+    print ("dasdasdas")
     optimizer_cls = eval('torch.optim.%s' % args.optimizer)  # FIXME: this is evil!
     optimizer = optimizer_cls(model.parameters(), lr=args.lr)
 
@@ -80,7 +88,7 @@ def train(args):
         print('use glorot initialization', file=sys.stderr)
         nn_utils.glorot_init(model.parameters())
 
-    # load pre-trained word embedding (optional)
+    print("load pre-trained word embedding (optional)")
     if args.glove_embed_path:
         print('load glove embedding from: %s' % args.glove_embed_path, file=sys.stderr)
         glove_embedding = GloveHelper(args.glove_embed_path)
