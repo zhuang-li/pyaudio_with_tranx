@@ -20,9 +20,12 @@ class Evaluator(object):
         for example, hyp_list in zip(examples, decode_results):
             if fast_mode:
                 hyp_list = hyp_list[:1]
-
+            #print (hyp_list[0].actions)
             if hyp_list:
                 for hyp_id, hyp in enumerate(hyp_list):
+                    #print (example.src_sent)
+                    #print (example.tgt_code)
+                    #print (hyp.code)
                     try:
                         is_correct = self.is_hyp_correct(example, hyp)
                     except:

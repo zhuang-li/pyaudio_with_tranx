@@ -9,6 +9,11 @@ from collections import Iterable
 
 from asdl.asdl import *
 from asdl.asdl_ast import AbstractSyntaxTree, RealizedField
+
+from os.path import dirname, abspath
+import os
+
+
 def parse_nlmap_expr_helper(nlmap_tokens, start_idx):
     i = start_idx
     name = nlmap_tokens[i]
@@ -405,7 +410,16 @@ def logical_form_to_ast_helper(grammar, literal_dict, lf_node):
             prod = grammar.get_prod_by_ctr_name('anony_var')
             var_field_one = RealizedField(prod['one'], value = val_arg_ast_node_two.fields[0].as_value_list[0])
             val_arg_ast_node_two = AbstractSyntaxTree(prod, [var_field_one])
-
+        d = dirname(dirname(abspath(__file__)))
+        dir_path = os.path.join(d, "nlmap/")
+        if not os.path.exists(dir_path):
+            os.makedirs(dir_path)
+        f = open(os.path.join(d, "nlmap/variable_phrases.txt"), 'a')
+        f.write(str(val_arg_ast_node_two.fields[0].as_value_list[0]) + '\n')
+        f.close()
+        f = open(os.path.join(d, "nlmap/key_phrase.txt"), 'a')
+        f.write(str(key_arg_ast_node_one.fields[0].as_value_list[0]) + '\n')
+        f.close()
         prod = grammar.get_prod_by_ctr_name(lf_node.name)
         key_var_field_one = RealizedField(prod['one'], key_arg_ast_node_one)
 
@@ -741,6 +755,7 @@ def logical_form_to_ast(grammar, code):
     dummy_node.add_child(lf_node)
     literal_dict = load_literal_dict()
     return logical_form_to_ast_helper(grammar, literal_dict, dummy_node)
+
 
 if __name__ == '__main__':
     asdl_desc = """

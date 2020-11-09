@@ -22,6 +22,8 @@ from asdl import *
 from asdl.asdl import ASDLGrammar
 from asdl.lang.nlmap import *
 from asdl.lang.nlmap.nlmap_transition_system import NlmapTransitionSystem
+from asdl.lang.lambda_dcs import *
+from asdl.lang.lambda_dcs.lambda_dcs_transition_system import LambdaCalculusTransitionSystem
 from common.registerable import Registrable
 from components.dataset import Dataset, Example
 from common.utils import update_args, init_arg_parser
@@ -56,7 +58,7 @@ def train(args):
     # load in train/dev set
     print ("training started ...")
     train_set = Dataset.from_bin_file(args.train_file)
-
+    #print (train_set.examples)
     if args.dev_file:
         dev_set = Dataset.from_bin_file(args.dev_file)
     else: dev_set = Dataset(examples=[])
@@ -65,19 +67,18 @@ def train(args):
     print ("reading grammar ...")
     grammar = ASDLGrammar.from_text(open(args.asdl_file).read())
     print ("transition system", args.transition_system)
-    transition_system = NlmapTransitionSystem(grammar)
-    print (transition_system)
+    transition_system = Registrable.by_name(args.transition_system)(grammar)
     print ("register parser ...")
     parser_cls = Registrable.by_name(args.parser)  # TODO: add arg
     model = parser_cls(args, vocab, transition_system)
     print ("setting model to training mode")
+    #print (model)
     model.train()
 
     evaluator = Registrable.by_name(args.evaluator)(transition_system, args=args)
-    print ("dasdasdas")
-    print (args.cuda)
+
     if args.cuda: model.cuda()
-    print ("dasdasdas")
+
     optimizer_cls = eval('torch.optim.%s' % args.optimizer)  # FIXME: this is evil!
     optimizer = optimizer_cls(model.parameters(), lr=args.lr)
 
@@ -93,7 +94,7 @@ def train(args):
         print('load glove embedding from: %s' % args.glove_embed_path, file=sys.stderr)
         glove_embedding = GloveHelper(args.glove_embed_path)
         glove_embedding.load_to(model.src_embed, vocab.source)
-
+    print (len(dev_set))
     print('begin training, %d training examples, %d dev examples' % (len(train_set), len(dev_set)), file=sys.stderr)
     print('vocab: %s' % repr(vocab), file=sys.stderr)
 
@@ -104,6 +105,8 @@ def train(args):
     while True:
         epoch += 1
         epoch_begin = time.time()
+        total_norm = 0
+        c = 0
 
         for batch_examples in train_set.batch_iter(batch_size=args.batch_size, shuffle=True):
             batch_examples = [e for e in batch_examples if len(e.tgt_actions) <= args.decode_max_time_step]
@@ -114,7 +117,7 @@ def train(args):
             loss = -ret_val[0]
 
             # print(loss.data)
-            loss_val = torch.sum(loss).data[0]
+            loss_val = torch.sum(loss).data.item()
             report_loss += loss_val
             report_examples += len(batch_examples)
             loss = torch.mean(loss)
@@ -134,6 +137,11 @@ def train(args):
             if args.clip_grad > 0.:
                 grad_norm = torch.nn.utils.clip_grad_norm(model.parameters(), args.clip_grad)
 
+            for p in model.parameters():
+                param_norm = p.data.norm(2)
+                total_norm += param_norm ** 2
+            total_norm = total_norm ** (1. / 2)
+            total_norm += total_norm
             optimizer.step()
 
             if train_iter % args.log_every == 0:
@@ -144,7 +152,9 @@ def train(args):
 
                 print(log_str, file=sys.stderr)
                 report_loss = report_examples = 0.
-
+            c += 1
+        print ("norm ==============================================")
+        print (total_norm/c)
         print('[Epoch %d] epoch elapsed %ds' % (epoch, time.time() - epoch_begin), file=sys.stderr)
 
         if args.save_all_models:
@@ -226,7 +236,6 @@ def train(args):
 
             # reset patience
             patience = 0
-
 
 def test(args):
     test_set = Dataset.from_bin_file(args.test_file)

@@ -122,7 +122,7 @@ class Batch(object):
         self.gen_token_mask = []
         self.primitive_copy_mask = []
         self.primitive_copy_token_idx_mask = np.zeros((self.max_action_num, len(self), max(self.src_sents_len)), dtype='float32')
-
+        #print (self.grammar.prod2id)
         for t in range(self.max_action_num):
             app_rule_idx_row = []
             app_rule_mask_row = []
@@ -135,9 +135,9 @@ class Batch(object):
                 if t < len(e.tgt_actions):
                     action = e.tgt_actions[t].action
                     action_info = e.tgt_actions[t]
-
                     if isinstance(action, ApplyRuleAction):
                         app_rule_idx = self.grammar.prod2id[action.production]
+                        #print(action.production)
                         # assert self.grammar.id2prod[app_rule_idx] == action.production
                         app_rule_mask = 1
                     elif isinstance(action, ReduceAction):
@@ -147,7 +147,7 @@ class Batch(object):
                         src_sent = self.src_sents[e_id]
                         token = str(action.token)
                         token_idx = self.vocab.primitive[action.token]
-
+                        #print (self.vocab.primitive.id2word[0])
                         token_can_copy = False
 
                         if self.copy and token in src_sent:
@@ -178,12 +178,15 @@ class Batch(object):
                         #         gen_token_mask = 1
 
                 app_rule_idx_row.append(app_rule_idx)
+                #print (app_rule_idx_row)
                 app_rule_mask_row.append(app_rule_mask)
 
                 token_row.append(token_idx)
                 gen_token_mask_row.append(gen_token_mask)
                 copy_mask_row.append(copy_mask)
-
+            #print ("================")
+            #print (app_rule_idx_row)
+            #print (token_row)
             self.apply_rule_idx_matrix.append(app_rule_idx_row)
             self.apply_rule_mask.append(app_rule_mask_row)
 
@@ -193,6 +196,8 @@ class Batch(object):
             self.primitive_copy_mask.append(copy_mask_row)
 
         T = torch.cuda if self.cuda else torch
+        #print (self.apply_rule_idx_matrix)
+        #print (self.primitive_idx_matrix)
         self.apply_rule_idx_matrix = Variable(T.LongTensor(self.apply_rule_idx_matrix))
         self.apply_rule_mask = Variable(T.FloatTensor(self.apply_rule_mask))
         self.primitive_idx_matrix = Variable(T.LongTensor(self.primitive_idx_matrix))

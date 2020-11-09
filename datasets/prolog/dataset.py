@@ -13,12 +13,12 @@ try: import cPickle as pickle
 except: import pickle
 
 import numpy as np
-
+import re
 
 def load_dataset(transition_system, dataset_file):
     examples = []
-    src_length_sum = 0
-    tgt_length_sum = 0
+    code_length_sum = 0
+    action_length_sum = 0
     for idx, line in enumerate(open(dataset_file)):
         src_query, tgt_code = line.strip().split('\t')
 
@@ -48,11 +48,16 @@ def load_dataset(transition_system, dataset_file):
         tgt_action_infos = get_action_infos(src_query_tokens, tgt_actions)
 
         print(idx)
-        print ("length of src query tokens is {}".format(len(src_query_tokens)))
-        print ("length of target actions is {}".format(len(tgt_actions)))
-        print ("ratio of target src is {}".format(len(tgt_actions)/len(src_query_tokens)))
-        src_length_sum += len(src_query_tokens)
-        tgt_length_sum += len(tgt_actions)
+        replaced_code = re.sub(r"(\(|\)|\,)", "", tgt_code)
+        replaced_code_list = [str for str in replaced_code.strip().split(" ") if str]
+        len_of_replaced_code_list = len(replaced_code_list)
+        print ("length of target code is : {}".format(len_of_replaced_code_list))
+        print ("length of target actions is : {}".format(len(tgt_actions)))
+        print ("ratio of actions/code is {}".format(len(tgt_actions)/len_of_replaced_code_list))
+        print ("tgt code is {}".format(replaced_code_list))
+        print ("tgt actions is {}".format(tgt_actions))
+        code_length_sum += len_of_replaced_code_list
+        action_length_sum += len(tgt_actions)
         example = Example(idx=idx,
                           src_sent=src_query_tokens,
                           tgt_actions=tgt_action_infos,
@@ -61,7 +66,7 @@ def load_dataset(transition_system, dataset_file):
                           meta=None)
 
         examples.append(example)
-    print("avg ratio of target src is {}".format(tgt_length_sum / src_length_sum))
+    print("avg ratio of actions/code is {}".format(action_length_sum / code_length_sum))
     return examples
 
 
